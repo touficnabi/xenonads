@@ -11,7 +11,7 @@ const HeroSlider = () => {
         return () => {
             return false
         }
-    }, [])
+    }, [slideActive])
 
     return(
         <div className="hero_slider">

@@ -40,7 +40,7 @@ export default function Home() {
                                 <Card icon={web} title="Website &amp; Web Strategy" description="Web is the most essential component in twenty first century. This is as important as having an office for business." prompt="View More" link="/" />
                                 <Card icon={branding} title="Branding" description="Branding is the face of your business. The first thing your audience will see is the look of your branding." prompt="See More" link="/" />
                             </div>
-                            <a href="/" className="button mt-5">All Services</a>
+                            <Link href="/"><a className="button mt-5">All Services</a></Link>
                         </Col>
                     </Row>
                 </Container>
@@ -53,7 +53,7 @@ export default function Home() {
                             <Col lg={6} className='text-center'>
                                 <h1 className="alt-heading">Interested to work with us?</h1>
                                 <p className='mt-3'>We would be more than happy to help you on the long run of your business!</p>
-                                <a href="/" className="button white mt-5">Request Callback</a>
+                                <Link href="/"><a className="button white mt-5">Request Callback</a></Link>
                             </Col>
                         </Row>
                     </Container>
