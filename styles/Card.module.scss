@@ -1,0 +1,61 @@
+@import 'variables';
+
+.card {
+    background-color: white;
+    padding: 30px;
+    transition: all .3s ease;
+    text-align: center;
+    max-width: 300px;
+    font-size: 1.4rem;
+    padding-bottom: 50px;
+    color: $charcoal;
+    text-decoration: none;
+    display: flex;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .icon {
+            > * {
+                display: flex;
+            }
+        }
+
+        .title {
+            h1 {
+                font-size: 1.5rem !important;
+                text-transform: uppercase;
+                margin-top: 20px;
+            }
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: $color1;
+            display: block;
+            margin: 20px auto 40px;
+            transition: all .3s ease;
+        }
+
+        .description {
+            flex: 1 0 auto;
+            margin-bottom: 30px;
+        }
+        
+        .prompt {
+            color: inherit;
+        }
+    }
+    
+    &:hover {
+        background-color: #5fdae8;
+        color: white;
+        box-shadow: 0 0 50px 34px transparentize(#000000, .95);
+
+        .bar {
+            background:white;
+        }
+    }
+}
