@@ -1,6 +1,6 @@
 
-import { Col, Row, Container } from 'react-bootstrap';
 import Head from 'next/head'
+import { Col, Row, Container } from 'react-bootstrap';
 import Image from 'next/image'
 import Link from 'next/link';
 import Header from '../components/Header';
@@ -9,13 +9,20 @@ import styles from '../styles/Home.module.scss';
 import HeroSlider from '../components/HeroSlider';
 import Card from '../components/Card';
 import CtaSection from './../components/CtaSection';
+import PortfolioItem from '../components/PortfolioItem';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
+//images
 import marketing from '../public/marketing.png';
 import web from '../public/web.png';
-import branding from '../public/branding.png'
+import branding from '../public/branding.png';
 
 export default function Home() {
     return (
         <>
+            <Head>
+                <title>XENON Advertising</title>
+            </Head>
             <Header />
             <Hero fullHeight overlay="gradient" withSlider />
 
@@ -65,6 +72,32 @@ export default function Home() {
                         <Col lg={10} className="text-center">
                             <h1 className="small-heading with-bar">Featured Projects</h1>
                             <p className="w-50 m-auto">Here are some projects from last 6 moths. Click the view more icon to see all the project completed so far.</p>
+                            <div className={styles.portfolio_container}>
+                                <PortfolioItem image="/project1.png" title="Notunotto" />
+                                <PortfolioItem image="/project2.jpeg" title="Notunotto" />
+                                <PortfolioItem image="/project3.jpeg" title="Notunotto" />
+                                <PortfolioItem image="/project4.jpeg" title="Notunotto" />
+                                <PortfolioItem image="/project5.jpeg" title="Notunotto" />
+                                <PortfolioItem image="/project6.jpeg" title="Notunotto" />
+                                <PortfolioItem image="/project7.jpeg" title="Notunotto" />
+                                <PortfolioItem image="/project8.jpeg" title="Notunotto" />
+                            </div>
+                            <Link href="/"><a className="button mt-5">View All Projects</a></Link>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+
+            <section>
+                <Container>
+                    <Row>
+                        <Col lg={12}>
+                            <VisibilitySensor partialVisibility offset={{top: 100}}>
+                                <>
+                                {({ isVisible }) => isVisible ? <CountUp end={1200} duration={1} startOnMount={false} /> : null}
+                                </>
+                            </VisibilitySensor>
+                            
                         </Col>
                     </Row>
                 </Container>
